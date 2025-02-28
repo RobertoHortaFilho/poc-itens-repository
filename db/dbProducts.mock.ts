@@ -41,7 +41,7 @@ const DBproducs: Record<string, number> = {
     "Uva Thompson cx 3 kg": 10,
   };
   
-  export function GetAll() {
+  export function getAllProducts() {
     return {...DBproducs}
   }
 

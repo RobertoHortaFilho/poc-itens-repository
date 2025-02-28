@@ -49,7 +49,7 @@ export default function RegisterStock() {
     };
     const response = DBaddDayEdit(dataAtual, DayEdit);
     if (response) {
-      return router.push("/Home");
+      return router.replace("/Home");
     }
     console.log("Desculpe ocorreu um erro");
   };
@@ -97,12 +97,12 @@ export default function RegisterStock() {
             onClick={handleAddProduct}
             className="bg-green-500 hover:bg-green-600 px-4 py-2 mt-2 rounded font-semibold"
           >
-            Adicionar ao Estoque
+            Remover do Estoque
           </button>
         </div>
       )}
       <h2 className="text-xl font-bold text-blue-300 mt-4 mb-2">
-        Itens Adicionados
+        Itens Removidos
       </h2>
       <ul className="bg-gray-800 p-4 rounded">
         {addedProducts.map((item, index) => (

@@ -49,7 +49,7 @@ export default function RegisterStock() {
     };
     const response = DBaddDayEdit(dataAtual, DayEdit);
     if (response) {
-      return router.push("/Home");
+      return router.replace("/Home");
     }
     console.log("Desculpe hocorreu um erro");
   };
