@@ -15,6 +15,7 @@ interface SelectedProduct {
   quantity: number;
 }
 
+// usar Use-form
 export default function RegisterStock() {
   const router = useRouter();
   const [search, setSearch] = useState("");
