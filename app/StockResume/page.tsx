@@ -17,13 +17,13 @@ export default function StockResume() {
   >([]);
   const [nameSearch, setNameSearch] = useState("");
   const [dateSearch, setDateSearch] = useState("");
-  const [filters, setFilter] = useState<TFilter>({
+  const [filters, _setFilter] = useState<TFilter>({
     orderBy: "NAME",
     method: "UPPER",
   });
 
   useEffect(() => {
-    let temp = listItens.filter((i) =>
+    const temp = listItens.filter((i) =>
       i.name.toLowerCase().includes(nameSearch.toLowerCase())
     );
     setFilterListItens(temp);

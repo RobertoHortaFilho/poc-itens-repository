@@ -3,15 +3,15 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Dialog from "@/components/dialog";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,8 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="bg-gray-900"
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900`}
       >
         <Dialog />
         {children}
