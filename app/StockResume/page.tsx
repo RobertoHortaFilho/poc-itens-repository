@@ -17,7 +17,7 @@ export default function StockResume() {
   >([]);
   const [nameSearch, setNameSearch] = useState("");
   const [dateSearch, setDateSearch] = useState("");
-  const [filters, _setFilter] = useState<TFilter>({
+  const [filters] = useState<TFilter>({
     orderBy: "NAME",
     method: "UPPER",
   });
