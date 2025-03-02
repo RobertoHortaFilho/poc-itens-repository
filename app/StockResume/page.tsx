@@ -69,23 +69,23 @@ export default function StockResume() {
       </form>
       <section className="w-full flex justify-center mt-10">
 				<section>
-					<table>
+					<table className="border-collapse border border-gray-700">
 						<thead>
-							<tr className="h-4 w-full bg-gray-800">
-								<td className="w-96 px-2">Nome</td>
-								<td className="w-40 px-2">Quantidade</td>
-								<td className="w-40 px-2">Ultimo dia Alterado</td>
+							<tr className="h-4 w-full bg-gray-700">
+								<td className="w-96 px-2 border border-gray-500">Nome</td>
+								<td className="w-40 px-2 border border-gray-500">Quantidade</td>
+								<td className="w-40 px-2 border border-gray-500">Ultimo dia Alterado</td>
 							</tr>
 						</thead>
 					</table>
-					<div className="max-h-80 overflow-y-scroll">
-						<table>
+					<div className="max-h-80 overflow-y-scroll no-scrollbar">
+						<table className="border-collapse border border-gray-600">
 							<tbody>
 								{filterListItens.map((item) => (
 									<tr key={`${item.name}-${item.quantity}`}>
-										<td className="w-96 px-2">{item.name}</td>
-										<td className="w-40 px-2">{item.quantity}</td>
-										<td className="w-40 px-2">28/02/2025</td>
+										<td className="w-96 px-2 border border-gray-800">{item.name}</td>
+										<td className="w-40 px-2 border border-gray-800">{item.quantity}</td>
+										<td className="w-40 px-2 border border-gray-800">28/02/2025</td>
 									</tr>
 								))}
 							</tbody>
