@@ -2,7 +2,7 @@
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { LoginResponseBadRequest, LoginResponseType } from "@/types/userstypes";
+import { LoginResponseType } from "@/types/userstypes";
 
 export default function LoginPage() {
 	const router = useRouter();
@@ -25,12 +25,13 @@ export default function LoginPage() {
         router.push("/Home");
       }
 		} catch (e) {
-      const error = e as LoginResponseBadRequest;
-      const data = error.response.data
-			if (data.response == "DENNIED") {
-				console.log(data.error);
-				return;
-			}
+			console.log(e)
+      // const error = e as LoginResponseBadRequest;
+      // const data = error.response.data
+			// if (data.response == "DENNIED") {
+			// 	console.log(data.error);
+			// 	return;
+			// }
     }
 
 		return;

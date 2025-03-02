@@ -21,6 +21,7 @@ class User {
 					email: { equals: this.email },
 				},
 			});
+			console.log('user', user)
 			if (!user) {
 				return { response: "DENNIED", error: "User not found" };
 			}
